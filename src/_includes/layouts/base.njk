@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth antialiased">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="/assets/css/tailwind.css" />
+  </head>
+  <body
+    class="font-mona"
+    x-data="{navOpen: false, scrolledDown: false}"
+  >
+    {% include "../components/navigation.njk" %}
+    <main class="">{{ content | safe }}</main>
+    {% include "../components/footer.njk" %}
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+    ></script>
+    
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="/assets/main.js"></script>
+    <script
+      type="text/javascript"
+      src="https://formkeep-production-herokuapp-com.global.ssl.fastly.net/formkeep-embed.js"
+    ></script>
+  </body>
+</html>
